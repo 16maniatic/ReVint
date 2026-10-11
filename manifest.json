@@ -1,0 +1,89 @@
+{
+  "manifest_version": 3,
+  "name": "ReVint",
+  "version": "1.0.0",
+  "description": "Republica tus artículos de Vinted con un clic (crea uno nuevo idéntico y borra el antiguo).",
+  "permissions": [
+    "storage"
+  ],
+  "host_permissions": [
+    "https://www.vinted.es/*",
+    "https://www.vinted.fr/*",
+    "https://www.vinted.it/*",
+    "https://www.vinted.de/*",
+    "https://www.vinted.co.uk/*",
+    "https://www.vinted.be/*",
+    "https://www.vinted.nl/*",
+    "https://www.vinted.pt/*",
+    "https://www.vinted.pl/*",
+    "https://www.vinted.at/*",
+    "https://www.vinted.lu/*",
+    "https://www.vinted.cz/*",
+    "https://www.vinted.sk/*",
+    "https://www.vinted.lt/*",
+    "https://www.vinted.hu/*",
+    "https://www.vinted.ro/*",
+    "https://www.vinted.se/*",
+    "https://www.vinted.fi/*",
+    "https://www.vinted.dk/*",
+    "https://www.vinted.gr/*",
+    "https://www.vinted.hr/*",
+    "https://www.vinted.ie/*",
+    "https://www.vinted.com/*",
+    "https://*.vinted.net/*"
+  ],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "content_scripts": [
+    {
+      "matches": [
+        "https://www.vinted.es/*",
+        "https://www.vinted.fr/*",
+        "https://www.vinted.it/*",
+        "https://www.vinted.de/*",
+        "https://www.vinted.co.uk/*",
+        "https://www.vinted.be/*",
+        "https://www.vinted.nl/*",
+        "https://www.vinted.pt/*",
+        "https://www.vinted.pl/*",
+        "https://www.vinted.at/*",
+        "https://www.vinted.lu/*",
+        "https://www.vinted.cz/*",
+        "https://www.vinted.sk/*",
+        "https://www.vinted.lt/*",
+        "https://www.vinted.hu/*",
+        "https://www.vinted.ro/*",
+        "https://www.vinted.se/*",
+        "https://www.vinted.fi/*",
+        "https://www.vinted.dk/*",
+        "https://www.vinted.gr/*",
+        "https://www.vinted.hr/*",
+        "https://www.vinted.ie/*",
+        "https://www.vinted.com/*"
+      ],
+      "js": [
+        "content.js"
+      ],
+      "css": [
+        "content.css"
+      ],
+      "run_at": "document_idle"
+    }
+  ],
+  "action": {
+    "default_title": "ReVint",
+    "default_popup": "popup.html",
+    "default_icon": {
+      "16": "icons/icon16.png",
+      "32": "icons/icon32.png",
+      "48": "icons/icon48.png"
+    }
+  },
+  "icons": {
+    "16": "icons/icon16.png",
+    "32": "icons/icon32.png",
+    "48": "icons/icon48.png",
+    "128": "icons/icon128.png"
+  }
+}

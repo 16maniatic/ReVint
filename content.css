@@ -1,0 +1,20 @@
+#vr-republish-btn {
+  position: fixed;
+  right: 20px;
+  bottom: 20px;
+  z-index: 2147483647;
+  padding: 12px 18px;
+  border: none;
+  border-radius: 999px;
+  background: #007782;
+  color: #fff;
+  font: 600 15px/1.2 system-ui, -apple-system, "Segoe UI", sans-serif;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.25);
+  cursor: pointer;
+  transition: transform 0.15s ease, background 0.15s ease;
+}
+#vr-republish-btn:hover { transform: translateY(-1px); background: #00636c; }
+#vr-republish-btn:active { transform: scale(0.97); }
+#vr-republish-btn[data-state="busy"] { background: #5a6b6d; cursor: progress; }
+#vr-republish-btn[data-state="done"] { background: #1a8a3a; }
+#vr-republish-btn[data-state="error"] { background: #c0392b; }
